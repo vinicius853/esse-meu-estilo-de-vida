@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre e Contato | EcoCachoeiras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">EcoCachoeiras 🌿</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cachoeiras.html">Cachoeiras</a></li>
+                <li><a href="dicas.html">Dicas & Segurança</a></li>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="page-header">
+            <h2>Quem está por trás do projeto?</h2>
+            <p>Tecnologia e Natureza caminhando juntas.</p>
+			<div class="search-box">
+        <input type="text" id="search-input" placeholder="Digite o nome da cachoeira... (ex: Deus, Fumaça)">
+			</div>
+        </section>
+
+        <div class="sobre-layout">
+            
+            <section class="bio-card">
+                <img src="imagens/eu.jpg" alt="Foto de Perfil" class="profile-pic">
+                <h3>Vinícius de Souza</h3>
+                <p class="role">Estudante de Análise e Desenvolvimento de Sistemas</p>
+                <p class="bio-text">
+                    Moro em Barra Mansa-RJ e sou apaixonado por tecnologia e trilhas. 
+                    Este projeto une meu aprendizado em Front-end com meu amor pelas cachoeiras da região do Vale do Paraíba.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/vinicius853" class="btn-social">GitHub</a>
+                    <a href="https://www.linkedin.com/in/vin%C3%ADcius-souza-analista-de-sistemas?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn-social">LinkedIn</a>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <h3>Entre em Contato</h3>
+                <form class="form-contato">
+                    <div class="form-group">
+                        <label for="nome">Seu Nome</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu E-mail</label>
+                        <input type="email" id="email" placeholder="exemplo@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="5" placeholder="Sua dúvida ou sugestão..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Vinícius de Souza &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

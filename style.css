@@ -1,0 +1,415 @@
+/* === VARIÁVEIS E RESET (A Base Profissional) === */
+:root {
+    --primary-color: #2E7D32; /* Verde Floresta */
+    --secondary-color: #0288D1; /* Azul Água */
+    --dark-color: #1a1a1a;
+    --light-color: #f4f4f4;
+    --text-color: #333;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* === HEADER & NAVEGAÇÃO === */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #a5d6a7;
+}
+
+/* === HERO SECTION (Destaque) === */
+.hero {
+    height: 80vh; /* 80% da altura da tela */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #0277bd;
+}
+
+/* === FOOTER === */
+footer {
+    background: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+/* === ESTILOS GERAIS DE PÁGINAS === */
+.container {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* === GRID SYSTEM (LAYOUT MODERNO) === */
+.grid-cachoeiras {
+    display: grid;
+    /* CORREÇÃO MOBILE: Alterado para 250px para caber em celulares */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* === CARDS === */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin: 0.5rem 0;
+    color: var(--dark-color);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-card:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* === BADGES (NÍVEL DE DIFICULDADE) === */
+/* CORREÇÃO: Chaves extras removidas aqui */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.badge.leve { background-color: #4CAF50; }     /* Verde */
+.badge.media { background-color: #FF9800; }    /* Laranja */
+.badge.dificil { background-color: #F44336; }  /* Vermelho */
+
+
+/* Estilo para link ativo no menu */
+.navbar .nav-links a.active {
+    color: #a5d6a7;
+    border-bottom: 2px solid #a5d6a7;
+}
+
+/* === LAYOUT DE PÁGINA DE CONTEÚDO === */
+.content-page {
+    max-width: 1000px;
+}
+
+/* Layout em duas colunas para telas grandes */
+.dicas-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado para 250px */
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.dicas-layout h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* === LISTAS ESTILIZADAS (O TRUQUE PRO) === */
+ul.custom-list {
+    list-style: none;
+}
+
+ul.custom-list li {
+    margin-bottom: 1rem;
+    padding-left: 30px;
+    position: relative;
+}
+
+/* Criando o "check" verde com CSS puro */
+ul.custom-list.checklist li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* === ALERT BOXES (UI DESIGN) === */
+.alert-box {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 5px solid; 
+}
+
+.alert-box h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.alert-box.danger {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #b71c1c;
+}
+
+.alert-box.info {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+    color: #0d47a1;
+}
+
+.alert-box.warning {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+/* === PÁGINA SOBRE (LAYOUT) === */
+.sobre-layout {
+    display: grid;
+    /* CORREÇÃO MOBILE: Alterado para 250px para caber em celulares */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    align-items: start; 
+}
+
+/* === BIO CARD (Perfil) === */
+.bio-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--primary-color);
+}
+
+.role {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.bio-text {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.btn-social {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 5px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.btn-social:hover {
+    background: var(--primary-color);
+}
+
+/* === FORMULÁRIO DE CONTATO (ESTILO PRO) === */
+.contact-form-section h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+/* CORREÇÃO: Vírgula adicionada abaixo */
+.form-group input,
+.form-group textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit; 
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(2, 136, 209, 0.2);
+}
+
+.form-contato button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+/* === BARRA DE PESQUISA (Search Bar) === */
+.search-box {
+    text-align: center;
+    margin: 20px 0 40px 0; /* Espaço em cima e embaixo */
+}
+
+#search-input {
+    width: 100%;
+    max-width: 500px; /* Não deixa ficar gigante em telas grandes */
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px; /* Bordas bem redondas */
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Efeito quando clica para digitar */
+#search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
